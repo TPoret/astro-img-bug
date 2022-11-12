@@ -1,0 +1,16 @@
+---
+export interface Props {
+    imgSource: string;
+}
+
+const { imgSource } = Astro.props;
+import { Picture, Image } from "@astrojs/image/components";
+---
+
+<Picture
+    src={import(`../${imgSource}`)}
+    widths={[200, 400, 800]}
+    sizes="(max-width: 800px) 100vw, 800px"
+    alt="whatever"
+/>
+<Image src={import(`../${imgSource}`)} alt="whatever" />
