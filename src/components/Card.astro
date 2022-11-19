@@ -7,10 +7,11 @@ const { imgSource } = Astro.props;
 import { Picture, Image } from "@astrojs/image/components";
 ---
 
+<div>lol</div>
 <Picture
-    src={import(`../${imgSource}`)}
+    src={import(`../${imgSource}.jpg`)}
     widths={[200, 400, 800]}
     sizes="(max-width: 800px) 100vw, 800px"
     alt="whatever"
 />
-<Image src={import(`../${imgSource}`)} alt="whatever" />
+<Image src={import(`../${imgSource}.jpg`)} alt="whatever" />
